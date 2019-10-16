@@ -4,6 +4,19 @@
 
 int main() {
   struct student foo = example();
-  printf("%s\n", foo.name);
-  printf("%d\n", foo.id);
+  printf("\n---EXAMPLE OF STRUCT STUDENT (FOO)---\n");
+  //printf("struct student { char name[10]; int id; }\n");
+  printf("Name of Student: %s\n", foo.name);
+  printf("Student ID: %d\n\n", foo.stuID);
+
+  types();
+
+  printf("---MODIFYING FOO---\n");
+  printf("modify(foo) ran\n");
+  struct student *f = &foo;
+  modify(f);
+  printf("New Name of Student: %s\n", foo.name);
+  printf("Student ID: %d\n\n", foo.stuID);
+
+
 }
