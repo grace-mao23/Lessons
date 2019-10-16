@@ -33,7 +33,7 @@ void types() {
   printf("stuID: int (int stuID)\n\n");
 }
 
-void modify(struct student *old) {
-  strcpy((*old).name, students[rand() % 26]);
-  (*old).stuID = rand();
+void modify(struct student *old, char *new, int newID) {
+  strcpy((*old).name, new);
+  (*old).stuID = newID;
 }
